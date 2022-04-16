@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    background-color: hsl(233, 47%, 7%);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 60rem;
+    height: 20rem;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5rem;
+}
+
+
+/* content */
+
+.content {
+    padding-right: 3rem;
+}
+
+.content h1 {
+    color: hsl(0, 0%, 100%);
+}
+
+.content samp {
+    color: hsla(288, 100%, 54%, 0.75);
+}
+
+.content p {
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 1rem 0;
+}
+
+/* content left */
+
+.content-left {
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+/* date */
+.date {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.date p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: small;
+}
+
+/* content right  */
+
+/* img */
+.img {
+    width: 30rem;
+    height: 20rem;
+    background: linear-gradient(0deg, rgba(117, 56, 156, 0.7) 50%, rgba(117, 56, 156, 0.5) 80%), url(/images/image-header-desktop.jpg) no-repeat;
+    background: cover;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.img-MB {
+    opacity: 0;
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        display: grid;
+        width: 19rem;
+        height: 41rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 13rem 40rem;
+    }
+
+    .content-left {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .content .date {
+        display: block;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .img-MB {
+        position: relative;
+        width: 100%;
+        display: -webkit-box;
+        opacity: 1;
+        background: linear-gradient(0deg, rgba(117, 56, 156, 0.7) 50%, rgba(117, 56, 156, 0.5) 80%), url(/images/image-header-mobile.jpg) no-repeat;
+    }
+
+    .date {
+        display: block;
+    }
+
+    .date>section:nth-child(2) {
+        padding: 2rem;
+    }
+
+
+
+}
