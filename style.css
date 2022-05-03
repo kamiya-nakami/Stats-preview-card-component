@@ -78,21 +78,44 @@ main {
     opacity: 0;
     display: none;
 }
-
+@media only screen and (max-width: 916px) {
+    .content-left h1 {
+        font-size: 2rem;
+        width: 23rem;
+    }
+    .content-left p {
+        font-size: 1rem;
+        margin-left: 3rem;
+    }
+    .date h2 {
+        margin-left: 4rem;
+    }
+}
 @media only screen and (max-width: 700px) {
     main {
         display: grid;
-        width: 19rem;
-        height: 41rem;
+        width: 23rem;
+        height: 44rem;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 13rem 40rem;
+        overflow: hidden;
     }
 
     .content-left {
         text-align: center;
         padding: 1rem;
+        width: 19rem;
+        padding: 0 2rem;
     }
-
+    .content {
+        padding-right: 0;
+    }
+    .content p {
+        margin: 0;
+    }
+    .content h1 {
+        width: 19rem;
+    } 
     .content .date {
         display: block;
     }
